@@ -1,15 +1,12 @@
-import { copyFileSync, existsSync, mkdirSync, statSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { copyFileSync, mkdirSync, statSync } from 'node:fs';
+import { join } from 'node:path';
 
-// A stained-glass storm jellyfish lifts a coastal town into the dusk sky.
-const source = './entry.png';
-const destination = process.env.MAKEFUN_OUTPUT_DIR
-  ? join(process.env.MAKEFUN_OUTPUT_DIR, 'entry.png')
-  : '/output/entry.png';
-
-if (!existsSync(source) || statSync(source).size === 0) {
-  throw new Error(`Entry image is missing or empty: ${source}`);
+// This entry presents a luminous storm jellyfish lifting a coastal town.
+const source = 'entry.png';
+const sourceSize = statSync(source).size;
+if (sourceSize === 0) {
+  throw new Error('entry.png is missing or empty');
 }
-
-mkdirSync(dirname(destination), { recursive: true });
-copyFileSync(source, destination);
+const outputDir = process.env.MAKEFUN_OUTPUT_DIR || '/output';
+mkdirSync(outputDir, { recursive: true });
+copyFileSync(source, join(outputDir, 'entry.png'));
