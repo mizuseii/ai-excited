@@ -1,6 +1,6 @@
 # Storm Jellyfish
 
-A stained-glass lightning jellyfish lifts a sleeping coastal town on ribbons of light, with a golden WOW above the storm.
+A stained-glass lightning jellyfish raises tiny boats above a sleeping coastal town, with a golden WOW glowing in the dusk sky.
 
 [![make.fun](https://make.fun/badge/ai-excited-01.svg)](https://make.fun/bounty/ai-excited-01)
 [![rank](https://make.fun/badge/ai-excited-01/mizuseii/ai-excited/rank.svg)](https://make.fun/bounty/ai-excited-01)
